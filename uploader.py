@@ -43,7 +43,11 @@ while (True):
 	if (bg == "q"):
 		break
 
-	print("Uploading BG " + bg)
+	current_time = time.time()
+	time_struct = time.localtime(current_time)
+
+	print("Uploading BG " + bg + "at " +time.asctime(time_struct))
+
 
 	if ( isANumber(bg) == False):
 		print "Invalid value entered: %s" % bg
@@ -54,8 +58,6 @@ while (True):
 		bg *= 18.018018
 		bg = int(bg)
 		
-	current_time = time.time()
-	time_struct = time.localtime(current_time)
 
 	payload = """[{\"type\": \"sgv\",
 	\"sgv\": %s,
