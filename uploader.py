@@ -62,7 +62,7 @@ while (True):
   current_time = time.time( )
   now = datetime.fromtimestamp(current_time).replace(tzinfo=args.timezone)
 
-  print("Uploading BG " + bg + " at " + now.isoformat( ))
+  print("Uploading BG %d at %s" %(bg,  now.isoformat( )))
 
   payload = dict(type='sgv', sgv=bg, date=int(current_time * 1000), dateString=now.isoformat( ))
 
