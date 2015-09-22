@@ -46,7 +46,7 @@ while (True):
 	current_time = time.time()
 	time_struct = time.localtime(current_time)
 
-	print("Uploading BG " + bg + "at " +time.asctime(time_struct))
+	print("Uploading BG " + bg + " at " +time.asctime(time_struct))
 
 
 	if ( isANumber(bg) == False):
